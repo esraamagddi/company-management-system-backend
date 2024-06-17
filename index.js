@@ -3,6 +3,7 @@ import { port } from './config.env.js';
 import dotenv from 'dotenv'
 import connectDB from "./databases/dbConnection.js";
 import cors from 'cors';
+import routes from './src/routes.js';
 
 dotenv.config();
 
@@ -19,4 +20,5 @@ app.use(cors({
   allowedHeaders: process.env.CORS_ALLOWED_HEADERS.split(','), 
   credentials: process.env.CORS_CREDENTIALS === 'true'
 }));  
-connectDB();  
+connectDB();
+app.use(routes);
