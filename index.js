@@ -4,6 +4,10 @@ const cors = require('cors');
 const connectDB = require("./databases/dbConnection.js");
 const routes = require('./src/routes.js');
 
+/**
+ *      user (empl - BM) notifications - /accept/decline/assign
+ *                  see all projects {queue} => Abdulrhman
+ */
 dotenv.config({ path: '.env' });
 
 const app = express();
